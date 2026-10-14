@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teacher Leen | Vocabulary Challenge 2.0</title>
+<title>Teacher Leen | Vocabulary Challenge 4.0</title>
 <style>
 :root{--navy:#173b67;--blue:#2c6db2;--sky:#eaf4ff;--green:#25834a;--gold:#f4b942;--ink:#233044;--muted:#66758a;--line:#dce5ef;--bg:#f5f8fc;--white:#fff;--red:#c93c45}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.45}
@@ -35,170 +35,213 @@ details{border:1px solid var(--line);border-radius:12px;padding:12px;margin:8px 
 footer{text-align:center;color:var(--muted);font-size:.8rem;padding:12px}
 @media(max-width:680px){.grid{grid-template-columns:1fr}.answers{grid-template-columns:1fr}.panel{padding:15px}.scorecards{grid-template-columns:1fr 1fr}.row>*{min-width:100%}.row .fixed{width:100%}th,td{padding:9px 7px}}
 @media print{header{background:#173b67!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.no-print,button,.filelabel{display:none!important}body{background:white}.panel{box-shadow:none;break-inside:avoid}main{margin-top:0}}
+
+/* Cheerful, pupil-friendly visual refresh — all quiz functionality preserved */
+:root{--navy:#233c72;--blue:#368be8;--sky:#e9f7ff;--green:#2eaf73;--gold:#ffca4f;--ink:#243455;--muted:#687894;--line:#dce7f5;--bg:#f2f8ff;--white:#fff;--red:#d94c78}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 10%,#fff4d9 0,transparent 22%),radial-gradient(circle at 92% 24%,#e5f9ec 0,transparent 23%),var(--bg);color:var(--ink);font-family:'Trebuchet MS',Arial,Helvetica,sans-serif;line-height:1.5}
+header{background:linear-gradient(125deg,#4aa7f5 0%,#8b7cf6 55%,#ff8fba 100%);color:white;padding:32px 18px 42px;border-bottom:7px solid #ffcf62;position:relative;overflow:hidden}
+header:after{content:'⭐ ✨ 📚 ✏️ 🌈';display:block;text-align:center;letter-spacing:12px;font-size:1.25rem;margin-top:14px;opacity:.95}
+.wrap{max-width:1440px;margin:auto;padding:0 20px}.brand{font-size:.82rem;letter-spacing:2px;text-transform:uppercase;opacity:1;font-weight:900;background:#ffffff2b;display:inline-block;padding:7px 13px;border-radius:99px;border:1px solid #ffffff80}
+h1{margin:12px 0;font-size:clamp(2rem,5vw,3.15rem);font-weight:1000;text-shadow:0 3px 0 #294c9a55;letter-spacing:-.5px}header p{margin:0;font-weight:700;font-size:1.02rem}
+main{margin-top:-22px;padding-bottom:35px}.panel{background:#ffffff;border:2px solid #e4ebf8;border-radius:24px;padding:22px;margin:18px 0;box-shadow:0 9px 0 #dbe8f8,0 15px 28px #345b8810}
+h2{font-size:1.35rem;margin:0 0 15px;color:var(--navy);font-weight:900}h3{margin:0 0 8px;font-size:1.05rem}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.part{border:2px solid #dce7f5;border-radius:20px;padding:14px 12px;text-align:center;background:linear-gradient(145deg,#fff,#f7fbff);cursor:pointer;color:var(--ink);transition:transform .16s,box-shadow .16s,border-color .16s;box-shadow:0 4px 0 #dbe5f3;min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px;min-width:0}.part strong{display:block;font-size:.93rem;line-height:1.25;overflow-wrap:anywhere}.part .num{margin:0 0 3px;font-size:1.25rem;padding:5px 11px}.part small{font-size:.76rem;line-height:1.35;margin-top:0}
+.part:hover{transform:translateY(-3px);box-shadow:0 7px 0 #dbe5f3}.part.active{border-color:#7c75ef;background:linear-gradient(145deg,#f0edff,#f8f7ff);box-shadow:0 4px 0 #c8c0ff}.part .num{font-size:1.5rem;font-weight:1000;color:#fff;background:linear-gradient(135deg,#ff9fbe,#ed5c94);border-radius:14px;padding:3px 10px;display:inline-block;margin:0 7px 8px 0;box-shadow:0 3px 0 #d94c83}.part:nth-child(2) .num{background:linear-gradient(135deg,#ffd978,#f2a82f);box-shadow:0 3px 0 #d98d1b}.part:nth-child(3) .num{background:linear-gradient(135deg,#78dca6,#24a96b);box-shadow:0 3px 0 #198c56}.part:nth-child(4) .num{background:linear-gradient(135deg,#83d6ff,#328ce9);box-shadow:0 3px 0 #2673c4}.part:nth-child(5) .num{background:linear-gradient(135deg,#c7a6ff,#8962ed);box-shadow:0 3px 0 #7047c8}.part small{display:block;color:var(--muted);margin-top:6px;font-size:.83rem}
+label{font-weight:800;font-size:.92rem;display:block;margin-bottom:6px}input,select,textarea{width:100%;padding:13px 14px;border:2px solid #d8e3f3;border-radius:14px;font:inherit;background:white;color:var(--ink)}input:focus,select:focus,textarea:focus{outline:3px solid #9bd9ff88;border-color:#55a9f3}
+button,.filelabel{border:0;border-radius:14px;padding:12px 17px;background:linear-gradient(135deg,#4b9cf2,#367be0);color:white;font:inherit;font-weight:900;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;box-shadow:0 4px 0 #2864ba;transition:transform .12s,filter .12s}
+button:hover,.filelabel:hover{filter:brightness(1.04);transform:translateY(-1px)}button:active{transform:translateY(2px);box-shadow:0 1px 0 #2864ba}button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.secondary{background:#eef6ff;color:#31517f;border:2px solid #d6e7fb;box-shadow:0 3px 0 #d0e0f3}.green{background:linear-gradient(135deg,#45ca8c,#20a86b);box-shadow:0 4px 0 #178653}.red{background:#fff0f4;color:#c33661;border:2px solid #ffd2de;box-shadow:0 3px 0 #f3c3d1}.gold{background:linear-gradient(135deg,#ffe18b,#ffc343);color:#765000;border:2px solid #ffe7a5;box-shadow:0 4px 0 #dfa32d}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.row .fixed{flex:0 0 auto}.muted{color:var(--muted);font-size:.9rem}.tiny{font-size:.8rem;color:var(--muted)}.status{padding:12px 15px;border-radius:14px;background:#eef7ff;border:1px dashed #b9d9f8;margin-top:10px;font-size:.92rem}
+.student-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:7px;margin-top:12px;align-items:stretch}.student-list>span{min-width:0;max-width:100%;border-radius:12px!important;padding:3px 5px 3px 8px!important;box-shadow:0 2px 0 #e8eef8}.chip{border:0;border-radius:8px;padding:5px 6px;background:transparent;color:var(--ink);cursor:pointer;font-weight:700;font-size:.78rem;line-height:1.25;text-align:left;min-width:0;overflow-wrap:anywhere;box-shadow:none}.chip.active{background:transparent;border-color:transparent;color:white;box-shadow:none}
+.progress{height:12px;background:#e7edf8;border-radius:99px;overflow:hidden;margin:12px 0}.progress div{height:100%;background:linear-gradient(90deg,#55d99a,#31a9ec,#9179f5);width:0;transition:width .2s;border-radius:99px}
+.qbox{background:linear-gradient(145deg,#f5fbff,#f8f5ff);border:2px solid #dce8fa;border-radius:22px;padding:22px;margin-top:14px}.qtext{font-size:1.35rem;font-weight:900;margin:12px 0 20px;color:#243b72}
+.answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.answer{background:white;border:2px solid #dce7f5;color:var(--ink);text-align:left;justify-content:flex-start;min-height:56px;box-shadow:0 3px 0 #e0e8f3}.answer:hover{background:#f0f8ff;border-color:#80c5ff}.answer.correct{background:#e7fbef;border-color:#65cb91;color:#176d43;box-shadow:0 3px 0 #b3e9c8}.answer.wrong{background:#fff0f4;border-color:#ee9eb3;color:#a51f45;box-shadow:0 3px 0 #f4c6d2}
+.feedback{font-weight:900;margin:13px 0}.scorecards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.scorecard{padding:14px 10px;background:linear-gradient(145deg,#f1f8ff,#f8f5ff);border:1px solid #e2e9f7;border-radius:17px;text-align:center}.scorecard strong{display:block;font-size:1.55rem;color:#6358d9}
+table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{padding:11px 9px;border-bottom:1px solid var(--line);text-align:left}th{background:#edf5ff;color:var(--navy)}.tablewrap{overflow-x:auto;border:2px solid var(--line);border-radius:15px}.rank{font-weight:900;color:#6859d9}.pill{font-size:.8rem;background:#eeeaff;color:#5948b5;border-radius:99px;padding:5px 10px;white-space:nowrap;font-weight:800}
+details{border:2px solid #e2e9f7;border-radius:15px;padding:13px;margin:8px 0;background:#fbfdff}summary{font-weight:800;cursor:pointer;color:var(--navy)}.hidden{display:none!important}footer{text-align:center;color:var(--muted);font-size:.83rem;padding:18px}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:680px){header{padding:25px 14px 35px}.wrap{padding:0 12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.part{min-height:138px;padding:12px 8px}.part strong{font-size:.86rem}.part small{font-size:.72rem}.answers{grid-template-columns:1fr}.panel{padding:16px;border-radius:19px}.scorecards{grid-template-columns:1fr 1fr}.row>*{min-width:100%}.row .fixed{width:100%}th,td{padding:9px 7px}h1{font-size:2rem}.student-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media print{header{background:#4b8fe7!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.no-print,button,.filelabel{display:none!important}body{background:white}.panel{box-shadow:none;break-inside:avoid}main{margin-top:0}}
+
+
+/* Rewards, avatars and victory celebration */
+.avatar{display:inline-grid;place-items:center;width:31px;height:31px;flex:0 0 31px;border-radius:50%;font-size:1.15rem;background:linear-gradient(135deg,#fff0b8,#ffd7ec);box-shadow:0 2px 0 #e3d5f3;margin-right:3px}
+.student-chip-inner{display:flex;align-items:center;gap:5px;min-width:0}.student-chip-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:155px}.student-chip-meta{font-size:.7rem;opacity:.88;white-space:nowrap}
+.reward-strip{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.reward-item{display:flex;align-items:center;gap:7px;border:1px solid #f2d987;background:linear-gradient(135deg,#fff8d8,#fff);padding:8px 12px;border-radius:14px;font-weight:800;font-size:.86rem;box-shadow:0 3px 0 #f4e8b6}.reward-item .reward-icon{font-size:1.3rem}.badge-shelf{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:14px 0}.achievement{display:flex;align-items:center;gap:7px;padding:8px 11px;border-radius:14px;background:linear-gradient(135deg,#fff3c5,#fff);border:2px solid #f3d778;box-shadow:0 3px 0 #e9ce73;font-weight:900;font-size:.82rem;animation:badgePop .55s ease both}.achievement.locked{filter:grayscale(1);opacity:.5;background:#f2f4f8;border-color:#d8dfeb;box-shadow:none}.achievement span{font-size:1.45rem}.confetti-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:9999}.confetti-piece{position:absolute;top:-24px;width:10px;height:16px;border-radius:3px;animation:confettiFall 2.5s ease-in forwards;left:var(--left);background:var(--confetti);transform:rotate(var(--rotation))}.victory{animation:victoryPulse .8s ease-in-out 2}.star-pop{display:inline-block;animation:starPop .55s cubic-bezier(.2,1.5,.5,1) both}.reward-total{font-size:1.05rem;color:#8a6100;font-weight:900}
+@keyframes confettiFall{to{top:105vh;transform:translateX(var(--drift)) rotate(760deg);opacity:.2}}
+@keyframes victoryPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025);box-shadow:0 0 0 6px #ffe08a,0 9px 0 #dbe8f8}}
+@keyframes badgePop{0%{transform:scale(.4) rotate(-12deg);opacity:0}70%{transform:scale(1.12) rotate(3deg)}100%{transform:scale(1);opacity:1}}
+@keyframes starPop{0%{transform:scale(.2) rotate(-45deg)}70%{transform:scale(1.4) rotate(12deg)}100%{transform:scale(1) rotate(0)}}
+@media(prefers-reduced-motion:reduce){.confetti-piece,.victory,.achievement,.star-pop{animation:none!important}}
+
 </style>
 </head>
 <body>
 <header>
  <div class="wrap">
   <div class="brand">Teacher Leen • English Language</div>
-  <h1>🏆 Vocabulary Challenge 2.0</h1>
-  <p>Kuiz Vocabulary Tahap 2 • Tahun 4, 5 &amp; 6 • 5 bahagian × 10 soalan</p>
+  <h1>🌈 Vocabulary Challenge 4.0</h1>
+  <p>Year 5–6 English Vocabulary & Language Challenge • Cabaran Kosa Kata dan Bahasa Tahun 5–6 • 5 sections × 10 questions / 5 bahagian × 10 soalan</p>
  </div>
 </header>
 <main class="wrap">
  <section class="panel no-print">
-  <h2>👩‍🏫 Pengurusan Murid</h2>
+  <h2>👩‍🏫 Student Management (Pengurusan Murid)</h2>
   <div class="row">
-   <div><label for="studentName">Tambah seorang murid</label><input id="studentName" placeholder="Contoh: Aina binti Ali"></div>
-   <button id="addStudent" class="fixed">＋ Tambah Murid</button>
+   <div><label for="studentName">Student name (Nama murid)</label><input id="studentName" placeholder="e.g. Aina binti Ali (contoh nama murid)"></div>
+   <button id="addStudent" class="fixed">＋ Add Student (Tambah Murid)</button>
   </div>
   <div class="row" style="margin-top:12px">
-   <div><label for="studentFile">Import nama murid (CSV/TXT)</label><input id="studentFile" type="file" accept=".csv,.txt"></div>
-   <button id="exportScores" class="secondary fixed">⬇ Eksport Markah CSV</button>
+   <div><label for="studentFile">Import student list (Import senarai nama, CSV/TXT)</label><input id="studentFile" type="file" accept=".csv,.txt"></div>
+   <button id="exportScores" class="secondary fixed">⬇ Export Scores (CSV) (Eksport Markah)</button>
   </div>
-  <p class="tiny">Import fail yang mengandungi satu nama pada setiap baris. Untuk CSV dengan tajuk “Nama”, tajuk itu akan diabaikan. Markah disimpan pada pelayar/peranti ini.</p>
+  <p class="tiny">Satu nama bagi setiap baris. CSV dengan tajuk “Nama/Name” akan dibaca secara automatik. / One name per line. A “Nama/Name” header in a CSV will be skipped. Markah disimpan pada pelayar/peranti ini. / Scores are saved in this browser/device.</p>
   <div id="studentStatus" class="status">Belum ada murid didaftarkan.</div>
   <div id="studentChips" class="student-list"></div>
+  <div id="studentRewards" class="reward-strip" aria-live="polite"><div class="reward-item"><span class="reward-icon">⭐</span> Stars earned (Bintang diperoleh): 0</div><div class="reward-item"><span class="reward-icon">🏅</span> Badges (Lencana): 0/5</div></div>
  </section>
 
  <section class="panel">
-  <h2>🎯 Pilih Bahagian Kuiz</h2>
+  <h2>🎯 Choose a Quiz Section (Pilih Bahagian Kuiz)</h2>
   <div class="grid" id="partButtons">
-   <button class="part active" data-part="0"><span class="num">01</span><strong>Everyday Words</strong><small>Perkataan harian • 10 soalan</small></button>
-   <button class="part" data-part="1"><span class="num">02</span><strong>Word Power</strong><small>Sinonim, antonim &amp; makna • 10 soalan</small></button>
-   <button class="part" data-part="2"><span class="num">03</span><strong>Vocabulary Master</strong><small>Vocabulary lanjutan • 10 soalan</small></button>
-   <button class="part" data-part="3"><span class="num">04</span><strong>Word in Context</strong><small>Pilih perkataan mengikut ayat • 10 soalan</small></button>
-   <button class="part" data-part="4"><span class="num">05</span><strong>Phrasal Verbs &amp; Collocations</strong><small>Frasa dan gabungan perkataan • 10 soalan</small></button>
+   <button class="part active" data-part="0"><span class="num">01</span><strong>Everyday Words</strong><small>Everyday topics &amp; language / Topik harian &amp; bahasa • 10 questions / soalan</small></button>
+   <button class="part" data-part="1"><span class="num">02</span><strong>Word Power</strong><small>Word relationships &amp; collocations / Hubungan perkataan &amp; kolokasi • 10 questions / soalan</small></button>
+   <button class="part" data-part="2"><span class="num">03</span><strong>Vocabulary Master</strong><small>Vocabulary in real-life contexts / Kosa kata dalam konteks • 10 questions / soalan</small></button>
+   <button class="part" data-part="3"><span class="num">04</span><strong>Word in Context</strong><small>Grammar and functional language / Tatabahasa dan bahasa fungsian • 10 questions / soalan</small></button>
+   <button class="part" data-part="4"><span class="num">05</span><strong>Phrasal Verbs &amp; Collocations</strong><small>Phrasal verbs &amp; collocations / Kata kerja frasa &amp; kolokasi • 10 questions / soalan</small></button>
   </div>
   <div class="row no-print" style="margin-top:15px">
-   <button id="startBtn" class="green" disabled>▶ Mula Kuiz</button>
-   <button id="resetPartBtn" class="secondary" disabled>↻ Ulang Bahagian Ini</button>
+   <button id="startBtn" class="green" disabled>▶ Start Quiz (Mula Kuiz)</button>
+   <button id="resetPartBtn" class="secondary" disabled>↻ Retry Section (Ulang Bahagian)</button>
   </div>
-  <div id="quizStatus" class="status">Daftarkan dan pilih nama murid, kemudian tekan “Mula Kuiz”.</div>
+  <div id="quizStatus" class="status">Register and select a student, then press “Start Quiz” (daftarkan dan pilih nama murid, kemudian tekan “Mula Kuiz”).</div>
   <div id="quizArea" class="hidden">
    <div class="row" style="margin-top:18px">
     <div><span class="pill" id="partLabel">Bahagian 1</span><h3 id="quizStudent" style="margin-top:8px"></h3></div>
-    <div style="text-align:right"><span class="muted" id="questionCount">Soalan 1/10</span><h3 id="liveScore">Markah: 0</h3></div>
+    <div style="text-align:right"><span class="muted" id="questionCount">Soalan / Question 1/10</span><h3 id="liveScore">Markah / Score: 0</h3></div>
    </div>
    <div class="progress"><div id="progressBar"></div></div>
    <div class="qbox">
-    <div class="muted" id="questionType">Pilih jawapan yang betul.</div>
+    <div class="muted" id="questionType">Choose the correct answer (pilih jawapan yang betul).</div>
     <div class="qtext" id="questionText"></div>
     <div class="answers" id="answerButtons"></div>
     <div id="feedback" class="feedback" aria-live="polite"></div>
-    <div class="row no-print"><button id="nextBtn" disabled>Soalan Seterusnya →</button><button id="quitBtn" class="secondary">Kembali ke Menu</button></div>
+    <div class="row no-print"><button id="nextBtn" disabled>Next Question (Soalan Seterusnya) →</button><button id="quitBtn" class="secondary">Back to Menu (Kembali ke Menu)</button></div>
    </div>
   </div>
   <div id="resultArea" class="hidden">
    <div class="qbox" style="text-align:center">
-    <div style="font-size:2.4rem">🌟</div><h2 id="resultTitle">Tahniah!</h2>
+    <div id="victoryIcon" style="font-size:2.8rem" class="star-pop">🏆✨🌟</div><h2 id="resultTitle">Amazing work! (Hebat!)</h2>
     <p id="resultMessage"></p>
+    <div class="reward-strip" style="justify-content:center"><div class="reward-item"><span class="reward-icon star-pop">⭐</span><span>Stars earned (Bintang diperoleh): <b id="resultStars">0</b></span></div></div>
+    <div id="badgeShelf" class="badge-shelf" aria-label="Achievement badges (Lencana pencapaian)"></div>
     <div class="scorecards">
-     <div class="scorecard"><span>Markah bahagian</span><strong id="resultPartScore">0/10</strong></div>
-     <div class="scorecard"><span>Jumlah terkumpul</span><strong id="resultTotal">0/50</strong></div>
-     <div class="scorecard"><span>Peratus keseluruhan</span><strong id="resultPercent">0%</strong></div>
-     <div class="scorecard"><span>Bahagian selesai</span><strong id="resultDone">0/5</strong></div>
-     <div class="scorecard"><span>Purata setiap bahagian</span><strong id="resultAverage">0/10</strong></div>
+     <div class="scorecard"><span>Markah bahagian / Section score</span><strong id="resultPartScore">0/10</strong></div>
+     <div class="scorecard"><span>Jumlah terkumpul / Total score</span><strong id="resultTotal">0/50</strong></div>
+     <div class="scorecard"><span>Peratus keseluruhan / Overall percentage</span><strong id="resultPercent">0%</strong></div>
+     <div class="scorecard"><span>Bahagian selesai / Sections completed</span><strong id="resultDone">0/5</strong></div>
+     <div class="scorecard"><span>Purata setiap bahagian / Average per section</span><strong id="resultAverage">0/10</strong></div>
     </div>
-    <div class="row no-print" style="margin-top:15px"><button id="nextPartBtn" class="green">Pilih Bahagian Seterusnya</button><button id="menuBtn" class="secondary">Menu Utama</button></div>
+    <div class="row no-print" style="margin-top:15px"><button id="nextPartBtn" class="green">Next Section (Bahagian Seterusnya)</button><button id="menuBtn" class="secondary">Main Menu (Menu Utama)</button></div>
    </div>
   </div>
  </section>
 
  <section class="panel">
   <div class="row">
-   <div><h2>📊 Papan Markah &amp; Ranking</h2><p class="muted">Markah disusun mengikut jumlah markah daripada 50.</p></div>
-   <button id="printBtn" class="secondary fixed no-print">🖨 Cetak</button>
+   <div><h2>📊 Scores &amp; Leaderboard (Papan Markah &amp; Ranking)</h2><p class="muted">Markah disusun daripada tertinggi ke terendah daripada 50. / Scores are ranked from highest to lowest out of 50.</p></div>
+   <button id="printBtn" class="secondary fixed no-print">🖨 Cetak / Print</button>
   </div>
   <div class="tablewrap">
    <table>
-    <thead><tr><th>Ked.</th><th>Nama Murid</th><th>Bahagian 1</th><th>Bahagian 2</th><th>Bahagian 3</th><th>Bahagian 4</th><th>Bahagian 5</th><th>Jumlah /50</th><th>%</th></tr></thead>
-    <tbody id="scoreTable"><tr><td colspan="9" class="muted">Markah akan dipaparkan di sini.</td></tr></tbody>
+    <thead><tr><th>Ked. / Rank</th><th>Nama Murid / Student</th><th>Bahagian / Sec. 1</th><th>Bahagian / Sec. 2</th><th>Bahagian / Sec. 3</th><th>Bahagian / Sec. 4</th><th>Bahagian / Sec. 5</th><th>Jumlah / Total /50</th><th>%</th></tr></thead>
+    <tbody id="scoreTable"><tr><td colspan="9" class="muted">Markah akan dipaparkan di sini. / Scores will appear here.</td></tr></tbody>
    </table>
   </div>
   <div class="row no-print" style="margin-top:12px">
-   <button id="clearScores" class="red">Padam Semua Rekod</button>
-   <button id="exportNames" class="secondary">⬇ Eksport Senarai Nama</button>
+   <button id="clearScores" class="red">Padam Semua Rekod / Clear All Records</button>
+   <button id="exportNames" class="secondary">⬇ Eksport Nama / Export Names</button>
   </div>
-  <p class="tiny">Peringatan: Data kekal pada pelayar/peranti yang sama. Eksport CSV sebagai salinan sandaran. Jika menggunakan komputer sekolah yang dikongsi, eksport rekod sebelum menutup pelayar.</p>
+  <p class="tiny">Peringatan: Data disimpan pada pelayar/peranti ini sahaja. / Note: Data is saved only in this browser/device. Eksport CSV sebagai salinan sandaran. / Export CSV as a backup. Pada komputer yang dikongsi, eksport rekod sebelum menutup pelayar. / On a shared computer, export records before closing the browser.</p>
  </section>
 
  <section class="panel no-print">
 <details>
-   <summary>📌 Panduan penggunaan</summary>
+   <summary>📌 How to Play (Cara Bermain)</summary>
+  <p class="muted">Questions are designed around familiar Year 5–6 themes and CEFR A2-level vocabulary in the Malaysian English curriculum. (Soalan dibina berdasarkan tema yang sesuai untuk Tahun 5–6 dan kosa kata tahap CEFR A2 dalam kurikulum Bahasa Inggeris Malaysia.)</p>
    <ol>
-    <li>Tambah nama murid atau import senarai nama menggunakan CSV/TXT.</li>
-    <li>Pilih nama murid pada senarai nama.</li>
-    <li>Pilih bahagian kuiz dan tekan <b>Mula Kuiz</b>.</li>
-    <li>Setiap jawapan betul mendapat 1 markah. Setiap bahagian membawa 10 markah; jumlah keseluruhan ialah 50 markah.</li>
-    <li>Selepas selesai, keputusan akan dikemas kini pada papan markah secara automatik.</li>
-    <li>Tekan <b>Eksport Markah CSV</b> untuk membuka keputusan dalam Excel.</li>
+    <li>Tambah nama murid atau import senarai CSV/TXT. / Add a student name or import a CSV/TXT list.</li>
+    <li>Pilih nama murid pada senarai. / Select a student from the list.</li>
+    <li>Pilih bahagian kuiz dan tekan <b>Mula Kuiz</b>. / Choose a quiz section and press <b>Start Quiz</b>.</li>
+    <li>Setiap jawapan betul mendapat 1 markah. / Each correct answer earns 1 point. Setiap bahagian bernilai 10 markah; jumlah keseluruhan 50. / Each section is worth 10 points; total 50.</li>
+    <li>Keputusan dikemas kini secara automatik. / Results update automatically on the leaderboard.</li>
+    <li>Tekan <b>Eksport Markah CSV</b> untuk membuka keputusan dalam Excel. / Press <b>Export Scores (CSV)</b> to open results in Excel.</li>
    </ol>
   </details>
  </section>
 </main>
-<footer>Teacher Leen • Vocabulary Challenge 2.0 • Dibina untuk aktiviti PdP Bahasa Inggeris Tahap 2</footer>
+<footer>Teacher Leen • Vocabulary Challenge 4.0 • Play • Learn • Challenge • Grow / Main • Belajar • Cabar • Maju</footer>
 <script>
 const quiz = [
 [
-{q:"What is the opposite of “expensive”?",o:["Cheap","Heavy","Wide","Strong"],a:0},
-{q:"Which word means “gembira”?",o:["Angry","Happy","Afraid","Tired"],a:1},
-{q:"A person who teaches pupils is a ____.",o:["Farmer","Nurse","Teacher","Pilot"],a:2},
-{q:"Which is a place to borrow books?",o:["Library","Canteen","Stadium","Market"],a:0},
-{q:"What is the plural of “child”?",o:["Childs","Childes","Childrens","Children"],a:3},
-{q:"Which word describes weather with lots of rain?",o:["Sunny","Rainy","Windy","Dry"],a:1},
-{q:"You use ____ to cut paper.",o:["A spoon","A ruler","Scissors","A plate"],a:2},
-{q:"Which animal gives us wool?",o:["Sheep","Tiger","Eagle","Dolphin"],a:0},
-{q:"What is the opposite of “early”?",o:["Quick","Late","Fast","Soon"],a:1},
-{q:"Which word means “lapar”?",o:["Thirsty","Sleepy","Hungry","Bored"],a:2}
+{q:"You should wear a helmet when you ____ a bicycle.",o:["fly", "ride", "sail", "drive"],a:1},
+{q:"To stay healthy, we should eat a balanced diet and ____ regularly.",o:["exercise", "pollute", "waste", "argue"],a:0},
+{q:"Please put plastic bottles into the ____ bin so they can be used again.",o:["recycling", "sleeping", "rubbish", "cooking"],a:0},
+{q:"The school field was wet because it had ____ heavily all night.",o:["rained", "rains", "rain", "raining"],a:0},
+{q:"If you feel unwell at school, you should tell your ____.",o:["teacher", "customer", "tourist", "passenger"],a:0},
+{q:"We should cross the road at the pedestrian ____.",o:["corner", "entrance", "crossing", "ceiling"],a:2},
+{q:"A person who designs buildings is an ____.",o:["architect", "artist's audience", "athlete", "astronaut's passenger"],a:0},
+{q:"The library is a place where pupils can borrow books and read ____.",o:["quietly", "noisily", "carelessly", "rudely"],a:0},
+{q:"The opposite of ‘generous’ is ____.",o:["helpful", "selfish", "kind", "thoughtful"],a:1},
+{q:"Our class planted trees to make the school environment ____.",o:["busier", "louder", "dirtier", "greener"],a:3}
 ],
 [
-{q:"Choose the synonym of “beautiful”.",o:["Ugly","Pretty","Dirty","Noisy"],a:1},
-{q:"Which word means “berbisik”?",o:["Whisper","Shout","Laugh","Cry"],a:0},
-{q:"A person who grows crops is a ____.",o:["Dentist","Chef","Farmer","Mechanic"],a:2},
-{q:"Which word means “berani”?",o:["Careless","Brave","Lazy","Nervous"],a:1},
-{q:"Choose the opposite of “generous”.",o:["Kind","Helpful","Selfish","Friendly"],a:2},
-{q:"The room was so ____ that I could not hear the teacher.",o:["Quiet","Silent","Peaceful","Noisy"],a:3},
-{q:"Which word means “membaiki”?",o:["Break","Repair","Throw","Borrow"],a:1},
-{q:"A journey by ship is called a ____.",o:["Voyage","Flight","Hike","Race"],a:0},
-{q:"Which word means “melindungi”?",o:["Destroy","Forget","Protect","Refuse"],a:2},
-{q:"The synonym of “enormous” is ____.",o:["Tiny","Narrow","Short","Huge"],a:3}
+{q:"Choose the word closest in meaning to ‘purchase’.",o:["borrow", "break", "buy", "sell"],a:2},
+{q:"Which word is the opposite of ‘temporary’?",o:["brief", "short", "limited", "permanent"],a:3},
+{q:"Choose the word closest in meaning to ‘assist’.",o:["help", "leave", "hinder", "hide"],a:0},
+{q:"Which word is the opposite of ‘include’?",o:["accept", "contain", "invite", "exclude"],a:3},
+{q:"The team worked together to complete the project. They showed good ____.",o:["pollution", "confusion", "permission", "cooperation"],a:3},
+{q:"Choose the best word to complete the phrase: a ____ decision.",o:["quickly", "wise", "heavy", "strongly"],a:1},
+{q:"Which word is closest in meaning to ‘enormous’?",o:["tiny", "huge", "shallow", "narrow"],a:1},
+{q:"Which word is the opposite of ‘polite’?",o:["patient", "friendly", "helpful", "rude"],a:3},
+{q:"Choose the best word to complete the phrase: a ____ of water.",o:["slice", "bottle", "bar", "loaf"],a:1},
+{q:"Which word best completes the sentence? The instructions were simple and ____ to follow.",o:["easier than", "ease", "easily", "easy"],a:3}
 ],
 [
-{q:"Which word means to find something for the first time?",o:["Discover","Ignore","Destroy","Repeat"],a:0},
-{q:"Choose the correct word: We must ____ water.",o:["Waste","Conserve","Pollute","Spill"],a:1},
-{q:"Which word means “terancam”?",o:["Protected","Endangered","Healthy","Ordinary"],a:1},
-{q:"A person who designs buildings is an ____.",o:["Architect","Artist","Actor","Athlete"],a:0},
-{q:"Choose the opposite of “ancient”.",o:["Historic","Old","Modern","Traditional"],a:2},
-{q:"Which word means “mencapai kejayaan”?",o:["Fail","Avoid","Achieve","Delay"],a:2},
-{q:"A sudden event that causes great damage is a ____.",o:["Festival","Disaster","Celebration","Holiday"],a:1},
-{q:"Which word means “bekerjasama”?",o:["Compete","Complain","Cooperate","Disagree"],a:2},
-{q:"Choose the synonym of “essential”.",o:["Useless","Optional","Unusual","Necessary"],a:3},
-{q:"Which word means “bertanggungjawab”?",o:["Responsible","Careless","Impatient","Dishonest"],a:0}
+{q:"The beach was littered with rubbish. The pupils helped to ____ it.",o:["clean up", "give up", "take off", "look after"],a:0},
+{q:"Maya checked the weather forecast before the trip. She wanted to be ____.",o:["confused", "unfair", "careless", "prepared"],a:3},
+{q:"The museum guide spoke clearly so that everyone could ____ the information.",o:["destroy", "invent", "understand", "forget"],a:2},
+{q:"The village held a food fair to raise money for families in need. It was a ____ event.",o:["private", "charity", "dangerous", "wasteful"],a:1},
+{q:"Aina saved her pocket money for three months. She was being ____ with money.",o:["carelessness", "careless", "careful", "carelessly"],a:2},
+{q:"The instructions said to stir the mixture gently. What should you do?",o:["Mix it with small, careful movements", "Throw it away", "Freeze it immediately", "Pour it onto the floor"],a:0},
+{q:"The team practised every afternoon and finally won the match. Their hard work led to ____.",o:["success", "failure", "waste", "danger"],a:0},
+{q:"The rainforest is home to many species of plants and animals. It has great ____.",o:["traffic", "machinery", "furniture", "biodiversity"],a:3},
+{q:"The school campaign encouraged pupils to use less water. Its aim was to ____ water.",o:["waste", "pollute", "spill", "conserve"],a:3},
+{q:"Farid returned the wallet he found on the floor. His action was ____.",o:["rude", "careless", "honest", "selfish"],a:2}
 ],
 [
-{q:"Please ____ your shoes before entering the house.",o:["take off","take up","take after","take over"],a:0},
-{q:"I usually ____ my homework after dinner.",o:["do","make","take","have"],a:0},
-{q:"Can you ____ me a favour?",o:["make","do","give","take"],a:1},
-{q:"We need to ____ a decision today.",o:["do","make","take","put"],a:1},
-{q:"The meeting was ____ because the teacher was ill.",o:["called off","looked after","turned on","found out"],a:0},
-{q:"Please ____ the lights when you leave the room.",o:["turn off","look up","give away","put on"],a:0},
-{q:"She is looking ____ her little brother.",o:["at","for","after","into"],a:2},
-{q:"I ran ____ an old friend at the market.",o:["over","into","away","out"],a:1},
-{q:"Which phrase is correct?",o:["heavy rain","strong rain","big rain","hard rain"],a:0},
-{q:"We should ____ attention when the teacher explains.",o:["pay","give","make","take"],a:0}
+{q:"If we leave early, we ____ the first bus.",o:["will catch", "caught", "catching", "catches"],a:0},
+{q:"The pupils ____ a poster when the headteacher entered the room.",o:["will made", "were making", "makes", "make"],a:1},
+{q:"We have lived in this neighbourhood ____ 2020.",o:["from", "during", "since", "for"],a:2},
+{q:"The school garden looks healthy ____ the pupils water the plants regularly.",o:["because", "although", "unless", "instead"],a:0},
+{q:"Choose the correct sentence.",o:["There are fewer plastic bags in the shop now.", "There is fewer plastic bags in the shop now.", "There are less plastic bags in the shop now.", "There be fewer plastic bags in the shop now."],a:0},
+{q:"The sign says ‘Keep off the grass.’ What should visitors do?",o:["Play football there", "Walk across the lawn", "Pick the flowers", "Stay off the grass"],a:3},
+{q:"Although the weather was rainy, the family ____ their visit to the farm.",o:["enjoys", "enjoyed", "enjoy", "enjoying"],a:1},
+{q:"Aiman has finished his homework, ____ he can play now.",o:["unless", "but", "so", "although"],a:2},
+{q:"Choose the correct question to ask for directions.",o:["Could you tell me how to get to the library?", "How library go?", "You tell me where library?", "Where you are going library?"],a:0},
+{q:"‘You should wear a hat in the hot sun.’ This sentence gives ____.",o:["advice", "a promise", "a complaint", "an invitation"],a:0}
 ],
 [
-{q:"If you are very tired, you should ____ a rest.",o:["do","make","take","give"],a:2},
-{q:"Please ____ the form in black ink.",o:["fill in","look after","turn down","give up"],a:0},
-{q:"The opposite of “give up” is to ____.",o:["carry on","put off","take off","look out"],a:0},
-{q:"I need to ____ a photo for my school project.",o:["make","do","take","get"],a:2},
-{q:"Which phrase is correct?",o:["make a mistake","do a mistake","take a mistake","give a mistake"],a:0},
-{q:"Could you ____ the meaning of this word in a dictionary?",o:["look up","look after","look out","look into"],a:0},
-{q:"The bus will ____ at 7.00 a.m.",o:["set off","put off","take after","give in"],a:0},
-{q:"We must ____ our promises.",o:["keep","hold","save","catch"],a:0},
-{q:"Which phrase means “sangat sibuk”?",o:["busy as a bee","busy like a fish","busy as a bird","busy like a cat"],a:0},
-{q:"Please ____ your voice in the library.",o:["raise","lower","grow","lift"],a:1}
+{q:"Please ____ your shoes before entering the house.",o:["take off", "take over", "take after", "take up"],a:0},
+{q:"I usually ____ my homework after dinner.",o:["take", "do", "make", "have"],a:1},
+{q:"Can you ____ me a favour?",o:["do", "give", "make", "take"],a:0},
+{q:"We need to ____ a decision before Friday.",o:["take", "make", "do", "put"],a:1},
+{q:"Please ____ the lights when you leave the room.",o:["give away", "turn off", "put on", "look up"],a:1},
+{q:"She is looking ____ her little brother while their parents are out.",o:["for", "after", "into", "at"],a:1},
+{q:"I ____ an old friend at the market yesterday.",o:["ran into", "ran away", "ran out", "ran over"],a:0},
+{q:"Which phrase is correct?",o:["hardly rain", "heavy rain", "strong rain", "big rain"],a:1},
+{q:"We should ____ attention when the teacher explains the task.",o:["make", "pay", "give", "take"],a:1},
+{q:"The bus will ____ at 7.00 a.m., so please be on time.",o:["put off", "set off", "give in", "take after"],a:1}
 ]
 ];
 const partNames=["Everyday Words","Word Power","Vocabulary Master","Word in Context","Phrasal Verbs & Collocations"];
@@ -206,32 +249,34 @@ const KEY="teacherLeenVocabularyChallenge2";
 let students=[],selectedStudent="",part=0,index=0,score=0,answered=false,playing=false;
 try{students=JSON.parse(localStorage.getItem(KEY)||"[]");if(!Array.isArray(students))students=[];students=students.map(s=>({...s,scores:[...(s.scores||[]),0,0].slice(0,5),done:[...(s.done||[]),false,false].slice(0,5)}));}catch(e){students=[];}
 const $=id=>document.getElementById(id);
-function persist(){try{localStorage.setItem(KEY,JSON.stringify(students));}catch(e){$("studentStatus").textContent="Pelayar tidak membenarkan simpanan automatik. Sila eksport CSV sebagai sandaran.";}}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(students));}catch(e){$("studentStatus").textContent="Simpanan automatik tidak tersedia. Eksport CSV sebagai sandaran. / Auto-save is unavailable. Export CSV as a backup.";}}
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function total(s){return s.scores.reduce((a,b)=>a+b,0);}
 function completed(s,p){return s.done[p];}
+const avatars=["🦊","🐼","🐯","🐸","🐱","🐨","🦄","🐰","🐻","🐵","🐧","🦁"];
+const badgeDefs=[{icon:"🌱",en:"First Steps",ms:"Langkah Pertama",test:s=>s.done.some(Boolean)},{icon:"🎯",en:"Sharp Shooter",ms:"Tepat Sasaran",test:s=>s.scores.some((v,i)=>s.done[i]&&v>=5)},{icon:"⭐",en:"Star Learner",ms:"Murid Bintang",test:s=>total(s)>=20},{icon:"🏅",en:"High Achiever",ms:"Pencapaian Tinggi",test:s=>total(s)>=40},{icon:"👑",en:"Vocabulary Champion",ms:"Juara Kosa Kata",test:s=>s.done.every(Boolean)&&total(s)>=45}];
+function starsFor(s){return s.scores.reduce((sum,v,i)=>sum+(s.done[i]?v:0),0);}
+function earnedBadges(s){return badgeDefs.filter(b=>b.test(s));}
+function renderRewardStrip(){
+ const box=$("studentRewards");if(!box)return;
+ const s=students.find(x=>x.id===selectedStudent);
+ if(!s){box.innerHTML='<div class="reward-item"><span class="reward-icon">⭐</span> Stars earned (Bintang diperoleh): 0</div><div class="reward-item"><span class="reward-icon">🏅</span> Badges (Lencana): 0/5</div>';return;}
+ const badges=earnedBadges(s);box.innerHTML=`<div class="reward-item"><span class="reward-icon">⭐</span> Stars earned (Bintang diperoleh): <b>${starsFor(s)}</b>/50</div><div class="reward-item"><span class="reward-icon">🏅</span> Badges (Lencana): <b>${badges.length}</b>/5</div>`;
+}
 function renderStudents(){
  const el=$("studentChips");el.innerHTML="";
- students.forEach(s=>{
-  const wrap=document.createElement("span");
-  wrap.style.display="inline-flex";wrap.style.alignItems="center";wrap.style.gap="4px";
-  wrap.style.border="1px solid var(--line)";wrap.style.borderRadius="99px";wrap.style.padding="3px 5px 3px 10px";
-  wrap.style.background=selectedStudent===s.id?"var(--navy)":"white";
-  const b=document.createElement("button");
-  b.className="chip"+(selectedStudent===s.id?" active":"");
-  b.textContent=s.name+" · "+total(s)+"/50";
-  b.style.border="0";b.style.padding="5px 6px";b.style.background="transparent";
-  b.style.color=selectedStudent===s.id?"white":"var(--ink)";
+ students.forEach((s,idx)=>{
+  const wrap=document.createElement("span");wrap.style.display="inline-flex";wrap.style.alignItems="center";wrap.style.gap="4px";wrap.style.border="1px solid var(--line)";wrap.style.borderRadius="13px";wrap.style.padding="3px 5px 3px 7px";wrap.style.minWidth="0";wrap.style.background=selectedStudent===s.id?"linear-gradient(135deg,#5b91ed,#7968e8)":"white";
+  const b=document.createElement("button");b.className="chip"+(selectedStudent===s.id?" active":"");
+  const badges=earnedBadges(s).length;
+  b.innerHTML=`<span class="student-chip-inner"><span class="avatar">${avatars[idx%avatars.length]}</span><span style="min-width:0"><span class="student-chip-name">${esc(s.name)}</span><br><span class="student-chip-meta">⭐ ${starsFor(s)} · 🏅 ${badges}/5</span></span></span>`;
+  b.style.cssText=`border:0;padding:3px 5px;background:transparent;color:${selectedStudent===s.id?'white':'var(--ink)'};text-align:left;min-width:0;box-shadow:none;flex:1;font-size:.76rem;line-height:1.15`;
   b.onclick=()=>{selectedStudent=s.id;renderStudents();updateControls();};
-  const del=document.createElement("button");
-  del.type="button";del.textContent="×";del.title="Buang "+s.name;
-  del.setAttribute("aria-label","Buang nama "+s.name);
-  del.style.cssText="flex:0 0 28px;width:28px;height:28px;padding:0;border-radius:50%;background:#fff0f0;color:#b4232d;border:1px solid #f0caca;font-size:18px;line-height:1";
-  del.onclick=(event)=>{event.stopPropagation();removeStudent(s.id);};
+  const del=document.createElement("button");del.type="button";del.textContent="×";del.title="Remove student (Buang murid): "+s.name;del.setAttribute("aria-label","Remove student (Buang murid): "+s.name);del.style.cssText="flex:0 0 25px;width:25px;height:25px;padding:0;border-radius:50%;background:#fff0f4;color:#b4232d;border:1px solid #f0caca;font-size:17px;line-height:1;box-shadow:none";del.onclick=(event)=>{event.stopPropagation();removeStudent(s.id);};
   wrap.appendChild(b);wrap.appendChild(del);el.appendChild(wrap);
  });
- $("studentStatus").textContent=students.length?`${students.length} murid berdaftar. Pilih nama murid untuk memulakan kuiz.`:"Belum ada murid didaftarkan.";
- renderTable();updateControls();
+ $("studentStatus").textContent=students.length?`${students.length} students registered (murid berdaftar). Select a name to play (pilih nama untuk bermain).`:`No students registered yet (belum ada murid didaftarkan).`;
+ renderRewardStrip();renderTable();updateControls();
 }
 function updateControls(){
  $("startBtn").disabled=!selectedStudent||playing;
@@ -239,15 +284,15 @@ function updateControls(){
 }
 function renderTable(){
  const tbody=$("scoreTable");
- if(!students.length){tbody.innerHTML='<tr><td colspan="9" class="muted">Markah akan dipaparkan di sini.</td></tr>';return;}
+ if(!students.length){tbody.innerHTML='<tr><td colspan="9" class="muted">Markah akan dipaparkan di sini. / Scores will appear here.</td></tr>';return;}
  const sorted=[...students].sort((a,b)=>total(b)-total(a)||a.name.localeCompare(b.name));
  tbody.innerHTML=sorted.map((s,i)=>`<tr><td class="rank">${i===0&&total(s)>0?"🥇":i===1&&total(s)>0?"🥈":i===2&&total(s)>0?"🥉":i+1}</td><td><b>${esc(s.name)}</b>${s.id===selectedStudent?' <span class="pill">Dipilih</span>':''}</td>${s.scores.map((v,j)=>`<td>${s.done[j]?v+"/10":"—"}</td>`).join("")}<td><b>${total(s)}/50</b></td><td>${Math.round(total(s)/50*100)}%</td></tr>`).join("");
 }
 function removeStudent(id){
  const s=students.find(x=>x.id===id);if(!s)return;
- if(!confirm(`Buang nama "${s.name}" bersama semua rekod markahnya? Tindakan ini tidak boleh dibatalkan.`))return;
+ if(!confirm(`Buang nama "${s.name}" dan semua markahnya? Tidak boleh dibatalkan. / Remove "${s.name}" and all scores? This cannot be undone.`))return;
  students=students.filter(x=>x.id!==id);
- if(selectedStudent===id){selectedStudent="";playing=false;$("quizArea").classList.add("hidden");$("resultArea").classList.add("hidden");$("quizStatus").textContent="Pilih murid untuk memulakan kuiz.";}
+ if(selectedStudent===id){selectedStudent="";playing=false;$("quizArea").classList.add("hidden");$("resultArea").classList.add("hidden");$("quizStatus").textContent="Pilih murid untuk mula kuiz. / Select a student to start.";}
  persist();renderStudents();updateControls();
 }
 function addStudent(name){
@@ -256,7 +301,7 @@ function addStudent(name){
  const id="stu_"+Date.now().toString(36)+"_"+Math.random().toString(36).slice(2,7);
  students.push({id,name,scores:[0,0,0,0,0],done:[false,false,false,false,false]});selectedStudent=id;persist();return true;
 }
-$("addStudent").onclick=()=>{const n=$("studentName").value;if(addStudent(n)){$("studentName").value="";renderStudents();}else alert("Masukkan nama yang sah. Nama yang sama mungkin sudah didaftarkan.");};
+$("addStudent").onclick=()=>{const n=$("studentName").value;if(addStudent(n)){$("studentName").value="";renderStudents();}else alert("Masukkan nama yang sah. Nama mungkin sudah didaftarkan. / Enter a valid name. It may already be registered.");};
 $("studentName").addEventListener("keydown",e=>{if(e.key==="Enter")$("addStudent").click();});
 $("studentFile").addEventListener("change",async e=>{
  const file=e.target.files[0];if(!file)return;
@@ -264,51 +309,61 @@ $("studentFile").addEventListener("change",async e=>{
  lines=lines.map(x=>x.split(",")[0].replace(/^["']|["']$/g,"").trim());
  if(lines.length&&/^(nama|name|student name)$/i.test(lines[0]))lines.shift();
  let added=0;lines.forEach(n=>{if(addStudent(n))added++;});
- renderStudents();alert(`${added} nama murid berjaya diimport. Nama pendua atau kosong diabaikan.`);e.target.value="";
+ renderStudents();alert(`${added} nama murid berjaya diimport / student name(s) imported. Nama pendua/kosong diabaikan. / Duplicate or blank names were skipped.`);e.target.value="";
 });
-document.querySelectorAll(".part").forEach(b=>b.onclick=()=>{if(playing)return;part=Number(b.dataset.part);document.querySelectorAll(".part").forEach(x=>x.classList.toggle("active",x===b));$("quizStatus").textContent=`Bahagian dipilih: ${partNames[part]}. Setiap soalan bernilai 1 markah.`;});
+document.querySelectorAll(".part").forEach(b=>b.onclick=()=>{if(playing)return;part=Number(b.dataset.part);document.querySelectorAll(".part").forEach(x=>x.classList.toggle("active",x===b));$("quizStatus").textContent=`Bahagian dipilih / Selected section: ${partNames[part]}. Setiap soalan bernilai 1 markah / Each question is worth 1 point.`;});
 function startQuiz(){
  if(!selectedStudent)return;
  const s=students.find(x=>x.id===selectedStudent);if(!s)return;
- if(s.done[part]&&!confirm(`${s.name} sudah mempunyai markah ${s.scores[part]}/10 untuk bahagian ini. Main semula? Markah lama akan digantikan.`))return;
+ if(s.done[part]&&!confirm(`${s.name} sudah mendapat / already scored ${s.scores[part]}/10. Main semula? Markah lama akan digantikan. / Play again? The previous score will be replaced.`))return;
  index=0;score=0;answered=false;playing=true;
  $("resultArea").classList.add("hidden");$("quizArea").classList.remove("hidden");
- $("quizStudent").textContent=s.name;$("partLabel").textContent=`Bahagian ${part+1}: ${partNames[part]}`;
- $("quizStatus").textContent="Kuiz sedang berlangsung. Pilih satu jawapan bagi setiap soalan.";
+ $("quizStudent").textContent=s.name;$("partLabel").textContent=`Section (Bahagian) ${part+1}: ${partNames[part]}`;
+ $("quizStatus").textContent="Kuiz sedang berlangsung. / Quiz in progress. Pilih satu jawapan. / Choose one answer.";
  updateControls();renderQuestion();
 }
 function renderQuestion(){
  const q=quiz[part][index];answered=false;
- $("questionCount").textContent=`Soalan ${index+1}/10`;
- $("liveScore").textContent=`Markah: ${score}`;
+ $("questionCount").textContent=`Soalan / Question ${index+1}/10`;
+ $("liveScore").textContent=`Markah / Score: ${score}`;
  $("progressBar").style.width=((index+1)*10)+"%";
  $("questionText").textContent=q.q;$("feedback").textContent="";$("nextBtn").disabled=true;
- $("nextBtn").textContent=index===9?"Lihat Keputusan ✓":"Soalan Seterusnya →";
+ $("nextBtn").textContent=index===9?"Lihat Keputusan / View Results ✓":"Next Question (Soalan Seterusnya) →";
  const box=$("answerButtons");box.innerHTML="";
  q.o.forEach((opt,i)=>{const b=document.createElement("button");b.className="answer";b.textContent=String.fromCharCode(65+i)+". "+opt;b.onclick=()=>choose(i,b);box.appendChild(b);});
 }
 function choose(i,btn){
  if(answered)return;answered=true;const q=quiz[part][index];const buttons=[...$("answerButtons").children];
  buttons.forEach((b,j)=>{b.disabled=true;if(j===q.a)b.classList.add("correct");});
- if(i===q.a){score++;$("feedback").textContent="✅ Betul! Well done!";$("feedback").style.color="var(--green)";}
- else{btn.classList.add("wrong");$("feedback").textContent="❌ Belum tepat. Jawapan: "+q.o[q.a];$("feedback").style.color="var(--red)";}
- $("liveScore").textContent=`Markah: ${score}`;$("nextBtn").disabled=false;
+ if(i===q.a){score++;$("feedback").textContent="✅ Correct! Well done! (Betul! Syabas!) ⭐ +1 star";$("feedback").style.color="var(--green)";}
+ else{btn.classList.add("wrong");$("feedback").textContent="❌ Not quite. Correct answer (Jawapan yang betul): "+q.o[q.a];$("feedback").style.color="var(--red)";}
+ $("liveScore").textContent=`Score (Markah): ${score} ⭐`;$("nextBtn").disabled=false;
+}
+function celebrate(){
+ const layer=document.createElement("div");layer.className="confetti-layer";layer.setAttribute("aria-hidden","true");
+ const colors=["#ff6fae","#ffc83d","#42c98a","#55b7ff","#9a7bff","#ff8c61"];
+ for(let i=0;i<90;i++){const bit=document.createElement("i");bit.className="confetti-piece";bit.style.setProperty("--left",Math.random()*100+"%");bit.style.setProperty("--confetti",colors[i%colors.length]);bit.style.setProperty("--rotation",Math.random()*180+"deg");bit.style.setProperty("--drift",(Math.random()*220-110)+"px");bit.style.animationDelay=(Math.random()*.65)+"s";bit.style.animationDuration=(1.8+Math.random()*1.5)+"s";layer.appendChild(bit);}
+ document.body.appendChild(layer);setTimeout(()=>layer.remove(),4300);
 }
 function finish(){
  const s=students.find(x=>x.id===selectedStudent);if(!s)return;
  s.scores[part]=score;s.done[part]=true;persist();playing=false;
  $("quizArea").classList.add("hidden");$("resultArea").classList.remove("hidden");
- $("resultTitle").textContent=`Tahniah, ${s.name}!`;
- $("resultMessage").textContent=score===10?"Perfect score! Cemerlang!":score>=8?"Bagus! Teruskan usaha yang hebat.":score>=5?"Usaha yang baik. Teruskan berlatih!":"Jangan berputus asa. Cuba lagi!";
+ $("resultTitle").textContent=`Tahniah / Well done, ${s.name}!`;
+ $("resultMessage").textContent=score===10?"Perfect score! Cemerlang / Excellent!":score>=8?"Bagus / Great! Teruskan usaha / Keep it up!":score>=5?"Usaha yang baik / Good effort. Teruskan berlatih / Keep practising!":"Jangan berputus asa / Don’t give up. Cuba lagi / Try again!";
  $("resultPartScore").textContent=score+"/10";$("resultTotal").textContent=total(s)+"/50";$("resultPercent").textContent=Math.round(total(s)/50*100)+"%";$("resultDone").textContent=s.done.filter(Boolean).length+"/5";$("resultAverage").textContent=(total(s)/5).toFixed(1)+"/10";
- $("quizStatus").textContent=`${partNames[part]} selesai. Markah telah disimpan.`;renderStudents();updateControls();
+ $("resultStars").textContent=starsFor(s);
+ const shelf=$("badgeShelf");shelf.innerHTML="";const earned=earnedBadges(s);
+ badgeDefs.forEach(b=>{const got=earned.includes(b);const item=document.createElement("div");item.className="achievement"+(got?"":" locked");item.innerHTML=`<span>${b.icon}</span><span>${b.en}<br><small>(${b.ms})</small></span>`;shelf.appendChild(item);});
+ const resultBox=$("resultArea").querySelector(".qbox");resultBox.classList.remove("victory");void resultBox.offsetWidth;if(score>=8){resultBox.classList.add("victory");celebrate();}
+ $("quizStatus").textContent=`${partNames[part]} selesai / completed. Markah disimpan / Score saved.`;renderStudents();updateControls();
 }
 $("nextBtn").onclick=()=>{if(!answered)return;if(index<9){index++;renderQuestion();}else finish();};
 $("startBtn").onclick=startQuiz;
 $("resetPartBtn").onclick=()=>{if(!selectedStudent)return;part=part;startQuiz();};
-$("quitBtn").onclick=()=>{if(confirm("Keluar daripada kuiz ini? Markah bahagian ini hanya disimpan selepas 10 soalan selesai.")){playing=false;$("quizArea").classList.add("hidden");$("quizStatus").textContent="Kuiz dihentikan. Markah hanya direkodkan apabila semua 10 soalan selesai.";updateControls();}};
-$("nextPartBtn").onclick=()=>{part=(part+1)%5;document.querySelectorAll(".part").forEach(x=>x.classList.toggle("active",Number(x.dataset.part)===part));$("resultArea").classList.add("hidden");$("quizStatus").textContent=`Bahagian dipilih: ${partNames[part]}. Tekan Mula Kuiz untuk bermain.`;};
-$("menuBtn").onclick=()=>{$("resultArea").classList.add("hidden");$("quizStatus").textContent="Pilih bahagian dan tekan Mula Kuiz.";};
+$("quitBtn").onclick=()=>{if(confirm("Keluar daripada kuiz? Markah disimpan selepas 10 soalan selesai. / Exit the quiz? The score is saved after all 10 questions are completed.")){playing=false;$("quizArea").classList.add("hidden");$("quizStatus").textContent="Kuiz dihentikan. Markah belum disimpan kerana 10 soalan belum selesai. / Quiz stopped. Score not saved because all 10 questions were not completed.";updateControls();}};
+$("nextPartBtn").onclick=()=>{part=(part+1)%5;document.querySelectorAll(".part").forEach(x=>x.classList.toggle("active",Number(x.dataset.part)===part));$("resultArea").classList.add("hidden");$("quizStatus").textContent=`Bahagian / Section: ${partNames[part]}. Tekan Mula Kuiz / Press Start Quiz to play.`;};
+$("menuBtn").onclick=()=>{$("resultArea").classList.add("hidden");$("quizStatus").textContent="Pilih bahagian dan tekan Mula Kuiz. / Choose a section and press Start Quiz.";};
 function download(name,content,type="text/csv;charset=utf-8;"){
  const blob=new Blob(["\ufeff"+content],{type});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
 }
@@ -322,8 +377,8 @@ $("exportNames").onclick=()=>download("Senarai_Nama_Murid.csv",[["Nama Murid"],.
 $("printBtn").onclick=()=>window.print();
 $("clearScores").onclick=()=>{
  if(!students.length)return;
- if(confirm("Padam SEMUA nama murid dan markah yang tersimpan pada pelayar ini? Tindakan ini tidak boleh dibatalkan.")){
- students=[];selectedStudent="";playing=false;persist();$("quizArea").classList.add("hidden");$("resultArea").classList.add("hidden");renderStudents();$("quizStatus").textContent="Semua rekod telah dipadam.";
+ if(confirm("Padam SEMUA nama dan markah pada pelayar ini? Tidak boleh dibatalkan. / Clear ALL names and scores saved in this browser? This cannot be undone.")){
+ students=[];selectedStudent="";playing=false;persist();$("quizArea").classList.add("hidden");$("resultArea").classList.add("hidden");renderStudents();$("quizStatus").textContent="Semua rekod dipadam. / All records cleared.";
  }
 };
 renderStudents();
